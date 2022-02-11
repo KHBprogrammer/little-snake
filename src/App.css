@@ -1,38 +1,25 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  padding: 40px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.snake-game {
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.map {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  width: 700px;
+  height: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map > div {
+  border: 1px solid lightgray;
+}
+.map > div.snake-body {
+  background-color: cadetblue;
+}
+.map > div.snake-head {
+  background-color: rgb(194, 47, 47);
 }
